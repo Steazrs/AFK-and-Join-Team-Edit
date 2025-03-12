@@ -9,7 +9,7 @@
  * Changelog starts here on the .SP file and on the site.                        *
  *                                                                               *
  * V Beta - Tested on my server:                                                 *
- * Creating/Testing the plugin on my server and in PawnStudio.                   * 
+ * Creating/Testing the plugin on my server and in PawnStudio.                   *
  *                                                                               *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * EDITING THE COMMANDS:                                                         *
@@ -101,14 +101,15 @@ public Action:AFKTurnClientToSpectate(client, argCount)
 
 
 public Action:AFKTurnClientToSurvivors(client, args)
-{ 
+{
 	ClientCommand(client, "jointeam 2");
+	PrintToChat(client, "You have joined the survivor team succesfully.")
 	return Plugin_Handled;
-	PrintToChat("You have joined the survivor team succesfully.")
+
 }
 public Action:AFKTurnClientToInfected(client, args)
-{ 
+{
 	ClientCommand(client, "jointeam 3");
+	PrintToChat(client, "You have joined the infected team succesfully.")
 	return Plugin_Handled;
-	PrintToChat("You have joined the infected team succesfully.")
 }
