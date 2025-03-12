@@ -104,9 +104,11 @@ public Action:AFKTurnClientToSurvivors(client, args)
 { 
 	ClientCommand(client, "jointeam 2");
 	return Plugin_Handled;
+	PrintToChat("You have joined the survivor team succesfully.")
 }
 public Action:AFKTurnClientToInfected(client, args)
 { 
 	ClientCommand(client, "jointeam 3");
 	return Plugin_Handled;
+	PrintToChat("You have joined the infected team succesfully.")
 }
